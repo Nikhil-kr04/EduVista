@@ -1,76 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management System - README</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            margin: 20px;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        code {
-            background-color: #e3e3e3;
-            padding: 4px 6px;
-            border-radius: 4px;
-        }
-        pre {
-            background: #2c3e50;
-            color: #ecf0f1;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Student Management System</h1>
-        <h2>Overview</h2>
-        <p>This C program is a <strong>Student Management System</strong> that allows users to input student data, calculate ranks, determine scholarships, display data in tabular form, save records to a CSV file, and visualize marks using a <strong>3D graph</strong>.</p>
+📚 Student Information Management System
 
-        <h2>Features</h2>
-        <ul>
-            <li><strong>Input Student Data</strong> - Collects student details.</li>
-            <li><strong>Rank Calculation</strong> - Determines ranking based on average marks.</li>
-            <li><strong>Scholarship Allocation</strong> - Assigns scholarships to top students.</li>
-            <li><strong>CSV Export</strong> - Saves student data for record-keeping.</li>
-            <li><strong>3D Visualization</strong> - Uses graphics to display marks in a bar chart.</li>
-        </ul>
+A C program that manages student records, calculates ranks, awards scholarships, and visualizes marks using a 3D graphical representation.
 
-        <h2>Compilation & Execution</h2>
-        <h3>Using GCC (Linux/Windows)</h3>
-        <pre><code>gcc student_management.c -o student_management -lgraph
-./student_management</code></pre>
+---
 
-        <h2>Sample Output</h2>
-        <pre>
--------------------------------------------------------------
-Roll    Name            Average Rank    Scholarship/Fee
--------------------------------------------------------------
-1       Alice           85.67    1      100% Scholarship
-2       Bob             78.33    2      75% Scholarship
-3       Charlie         75.00    3      50% Scholarship
--------------------------------------------------------------
-        </pre>
+🎯 Features
+- Input and store student details including name, roll number, contact info, and marks.
+- Compute the average marks and assign ranks.
+- Award scholarships based on ranks and adjust tuition fees accordingly.
+- Display student data in a tabular format.
+- Save student details to a CSV file for easy access.
+- 3D graphical visualization of student marks using bars (C, Math, Chemistry).
 
-        <h2>License</h2>
-        <p>This project is open-source and free to use under the <strong>MIT License</strong>.</p>
-    </div>
-</body>
-</html>
+---
+
+🛠 Installation & Usage
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/student-management.git
+   cd student-management
+   ```
+2. Compile the program
+   ```bash
+   gcc student_management.c -o student_management -lgraph
+   ```
+3. Run the program
+   ```bash
+   ./student_management
+   ```
+
+---
+
+📝 Code Explanation
+🔹 Structures and Unions Used:
+- <span style="color:#FF5733">`struct contact`</span> → Stores address, phone number, and email.
+- <span style="color:#33FF57">`union fee_or_scholarship`</span> → Holds either scholarship percentage or tuition fee.
+- <span style="color:#3399FF">`struct student`</span> → Combines student details, marks, and financials.
+
+🔹 Key Functions:
+- `inputStudentData()` → Takes input from the user.
+- `calculateRanks()` → Assigns ranks based on average marks.
+- `calculateScholarships()` → Determines scholarship or tuition fees.
+- `displayTabularData()` → Prints student details in a formatted table.
+- `saveToCSV()` → Saves student data to a CSV file.
+- `plotMarks3D()` → Uses **graphics.h** to draw a 3D bar chart.
+
+---
+
+📊 Graphical Representation
+The 3D graph plots the marks of each student in:
+- 🔴 Red → C Language Marks
+- 🟢 Green → Math Marks
+- 🔵 Blue → Chemistry Marks
+
+The bars for each student appear side by side with their respective scores displayed.
+
+---
+
+🏆 Scholarship Criteria
+| Rank  | Scholarship  |
+|-------|-------------|
+| 1     | 100%       |
+| 2     | 75%        |
+| 3     | 50%        |
+| 4     | 25%        |
+| 5+    | Full Tuition Fee |
+
+---
+
+🗂 File Structure
+```
+student-management/
+│── student_management.c  # Main C program
+│── students_data.csv     # Output file (generated after running the program)
+│── README.md             # Documentation
+```
+
+---
+
+🔥 Contributing
+Feel free to **fork** the repository and submit **pull requests** if you want to improve the project. Contributions are welcome!
+
+---
+
+📜 License
+This project is licensed under the **MIT License**.
+DEVELOPER -- NIKHIL KUMAR
+
+Happy coding! 🚀
+
+
