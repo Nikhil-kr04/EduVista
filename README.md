@@ -1,135 +1,76 @@
-Student Management System
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System - README</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        code {
+            background-color: #e3e3e3;
+            padding: 4px 6px;
+            border-radius: 4px;
+        }
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System</h1>
+        <h2>Overview</h2>
+        <p>This C program is a <strong>Student Management System</strong> that allows users to input student data, calculate ranks, determine scholarships, display data in tabular form, save records to a CSV file, and visualize marks using a <strong>3D graph</strong>.</p>
 
-Overview
+        <h2>Features</h2>
+        <ul>
+            <li><strong>Input Student Data</strong> - Collects student details.</li>
+            <li><strong>Rank Calculation</strong> - Determines ranking based on average marks.</li>
+            <li><strong>Scholarship Allocation</strong> - Assigns scholarships to top students.</li>
+            <li><strong>CSV Export</strong> - Saves student data for record-keeping.</li>
+            <li><strong>3D Visualization</strong> - Uses graphics to display marks in a bar chart.</li>
+        </ul>
 
-This C program is a Student Management System that allows users to input student data, calculate ranks based on marks, determine scholarships, display data in tabular form, save student records to a CSV file, and visualize marks using a 3D graph (using graphics.h).
+        <h2>Compilation & Execution</h2>
+        <h3>Using GCC (Linux/Windows)</h3>
+        <pre><code>gcc student_management.c -o student_management -lgraph
+./student_management</code></pre>
 
-Features
-
-Input Student Data: Collects details like name, roll number, marks, contact info, and financial details.
-
-Rank Calculation: Ranks students based on their average marks.
-
-Scholarship Calculation: Assigns scholarships to top-ranking students.
-
-Tabular Display: Presents student details in a structured format.
-
-CSV File Export: Saves student records for future reference.
-
-3D Marks Visualization: Uses graphics to display subject-wise marks in a bar chart.
-
-Data Structures Used
-
-struct contact: Stores address, phone number, and email.
-
-union fee_or_scholarship: Holds either scholarship percentage or tuition fee.
-
-struct student: Main structure storing student details.
-
-Compilation & Execution
-
-Requirements
-
-C Compiler (GCC, MinGW, Turbo C, etc.)
-
-graphics.h library (required for plotting marks in a 3D graph)
-
-Windows OS recommended (for graphics.h compatibility)
-
-Steps to Compile & Run
-
-Using GCC (Linux/Windows)
-
-Install required graphics library:
-
-Windows (MinGW users): Add graphics.h to the compiler's library.
-
-Linux: Use SDL_bgi instead of graphics.h.
-
-Compile the program:
-
-gcc student_management.c -o student_management -lgraph
-
-Run the executable:
-
-./student_management
-
-Functionalities Explained
-
-1. Input Student Data
-
-Collects details like name, roll number, marks in C, Mathematics, and Chemistry.
-
-Validates phone numbers to ensure numeric input.
-
-Computes the average marks.
-
-2. Calculate Ranks
-
-Sorts students in descending order based on their average marks.
-
-Assigns rank 1 to the highest scorer.
-
-3. Determine Scholarships
-
-Rank 1: 100% Scholarship
-
-Rank 2: 75% Scholarship
-
-Rank 3: 50% Scholarship
-
-Rank 4: 25% Scholarship
-
-Others: Pay tuition fee (141240 * 1.25).
-
-4. Display Data in Table
-
-Shows student details including marks, rank, and scholarship/fee details.
-
-5. Save Data to CSV
-
-Exports all student data to a CSV file (students_data.csv).
-
-6. 3D Visualization of Marks
-
-Uses graphics.h to create a bar chart of marks in C, Mathematics, and Chemistry.
-
-Colors:
-
-Red: C marks
-
-Green: Mathematics marks
-
-Blue: Chemistry marks
-
-Labels students and their marks on the graph.
-
-Sample Output
-
+        <h2>Sample Output</h2>
+        <pre>
 -------------------------------------------------------------
 Roll    Name            Average Rank    Scholarship/Fee
 -------------------------------------------------------------
-1       Alice           85.67    1      100% Scholarship | Reduced Fee: 0.00
-2       Bob             78.33    2      75% Scholarship | Reduced Fee: 35310.00
-3       Charlie         75.00    3      50% Scholarship | Reduced Fee: 70620.00
-4       David           70.50    4      25% Scholarship | Reduced Fee: 105930.00
-5       Eva             60.00    5      176550.00 Tuition Fee
+1       Alice           85.67    1      100% Scholarship
+2       Bob             78.33    2      75% Scholarship
+3       Charlie         75.00    3      50% Scholarship
 -------------------------------------------------------------
-Student data has been saved to 'students_data.csv'
+        </pre>
 
-Future Enhancements
-
-GUI-based student management system
-
-Additional subjects and dynamic grading system
-
-Integration with a database
-
-License
-
-This project is open-source and free to use under the MIT License.
-
-Author
-
-Developed by [Your Name]
-
+        <h2>License</h2>
+        <p>This project is open-source and free to use under the <strong>MIT License</strong>.</p>
+    </div>
+</body>
+</html>
